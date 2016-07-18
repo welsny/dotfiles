@@ -1,11 +1,15 @@
 # Aliases:
 
-alias sublime "open -a /Applications/Sublime\ Text.app/"
-alias vlc "open -a /Applications/VLC.app/"
-alias word "open -a /Applications/Microsoft\ Word.app/"
+switch (uname)
+    case Darwin:
+        alias sublime "open -a /Applications/Sublime\ Text.app/"
+        alias vlc "open -a /Applications/VLC.app/"
+        alias word "open -a /Applications/Microsoft\ Word.app/"
+
+        alias git hub
+end
 
 alias vim nvim
-alias git hub
 
 # Hardware:
 

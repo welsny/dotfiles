@@ -3,10 +3,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'ervandew/supertab'
+
+Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Valloric/YouCompleteMe'
+Plug 'ervandew/supertab'
 
 Plug 'hdima/python-syntax'
 Plug 'sickill/vim-monokai'
@@ -21,6 +22,8 @@ colorscheme seoul256
 set number
 set cursorline
 set colorcolumn=120
+
+set nobackup
 
 let python_highlight_all=1
 
