@@ -7,6 +7,7 @@ switch (uname)
         alias word "open -a /Applications/Microsoft\ Word.app/"
 
         alias git hub
+	alias python ipython
 end
 
 alias vim nvim
