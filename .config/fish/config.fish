@@ -1,8 +1,9 @@
 # Aliases:
 
+alias vim nvim
+
 switch (uname)
     case Darwin:
-        alias sublime "open -a /Applications/Sublime\ Text.app/"
         alias vlc "open -a /Applications/VLC.app/"
         alias word "open -a /Applications/Microsoft\ Word.app/"
 
@@ -10,7 +11,6 @@ switch (uname)
 	alias python ipython
 end
 
-alias vim nvim
 
 # Hardware:
 
@@ -26,6 +26,7 @@ switch (uname)
         echo 'xinput set-button-map $(xinput | grep "Evoluent" | awk {"print substr(7,4,2)"}) 1 3 3 4 5 6 7 9 2 8 11 12 13 14' | sh
         setxkbmap -option ctrl:nocaps
 end
+
 
 # Misc:
 
