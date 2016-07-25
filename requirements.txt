@@ -1,4 +1,0 @@
-ipython==4.2.0
-ipython-genutils==0.1.0
-neovim==0.1.8
-virtualfish==1.0.0
