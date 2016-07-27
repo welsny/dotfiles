@@ -12,6 +12,7 @@ if [ $(uname -s) = 'Darwin' ]; then
         fish \
         neovim \
         git \
+        diff-so-fancy \
         python
 
     pip install \
@@ -24,4 +25,5 @@ mkdir -p ~/.config/nvim/autoload
 curl --insecure -fLo ~/.config/nvim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim
 
 vim +PlugInstall +qall
+
 python ~/.config/nvim/plugged/YouCompleteMe/install.py
