@@ -1,8 +1,6 @@
 [user]
 	name = welsny
 	email = zengw@mssm.org
-[credential]
-	helper = osxkeychain
 [alias]
 	st = status
 	br = branch
