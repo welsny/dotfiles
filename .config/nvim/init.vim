@@ -30,15 +30,28 @@ set nobackup
 
 let python_highlight_all=1
 
-let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType='<C-n>'
+let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
+let g:SuperTabDefaultCompletionType='<C-j>'
 
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
-map <C-m> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
+
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+
+nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
+
+noremap <C-[> <C-t>
+
+noremap <j> gj
+noremap <k> gk
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
