@@ -9,5 +9,8 @@ setxkbmap -option ctrl:nocaps
 
 # Misc:
 
+set PATH $PATH /usr/local/Python-3.5.2/bin
+export PATH
+
 eval (python -m virtualfish)
 
