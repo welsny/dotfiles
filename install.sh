@@ -1,30 +1,28 @@
 #!/bin/bash
 
-if [ $(uname -s) = 'Darwin' ]; then
-    [ -z "$(which brew)" ] &&
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+[ -z "$(which brew)" ] &&
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    brew tap caskroom/cask
+brew tap caskroom/cask
 
-    brew cask install \
-        google-chrome \
-        iterm2 \
-        flux \
-        vlc
+brew cask install \
+    google-chrome \
+    iterm2 \
+    flux \
+    vlc
 
-    brew install \
-        fish \
-        neovim \
-        git \
-        hub \
-        diff-so-fancy \
-        python
+brew install \
+    fish \
+    neovim \
+    git \
+    hub \
+    diff-so-fancy \
+    python
 
-    pip install \
-        ipython \
-        neovim \
-        virtualfish
-fi
+pip install \
+    ipython \
+    neovim \
+    virtualfish
 
 chsh -s `which fish`
 
