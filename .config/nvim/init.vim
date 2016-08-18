@@ -26,7 +26,10 @@ set number
 set cursorline
 set colorcolumn=120
 
-set nobackup
+set expandtab
+set shiftwidth=4
+set ignorecase
+set smartcase
 
 let python_highlight_all=1
 
@@ -53,7 +56,13 @@ noremap <C-[> <C-t>
 noremap <j> gj
 noremap <k> gk
 
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
