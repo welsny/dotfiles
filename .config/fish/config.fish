@@ -2,20 +2,12 @@
 
 alias vim nvim
 
-alias vlc "open -a /Applications/VLC.app/"
-alias word "open -a /Applications/Microsoft\ Word.app/"
-
-alias git hub
-alias python ipython
-
-
 # Hardware:
 
-# OSX Mouse/Trackpad Acceleration:
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
-defaults write -g com.apple.trackpad.scaling -float 5.0
-defaults write -g com.apple.mouse.scaling -float 5.0
-  
+echo 'xinput set-button-map $(xinput | grep "Evoluent" | awk {"print substr(7,4,2)"}) 1 3 3 4 5 6 7 9 2 8 11 12 13 14' | sh
+setxkbmap -option ctrl:nocaps
+
 # Misc:
 
 eval (python -m virtualfish)
+
