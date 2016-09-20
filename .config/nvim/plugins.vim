@@ -24,9 +24,9 @@ colorscheme seoul256
 
 let python_highlight_all=1
 
-let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
-let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
-let g:SuperTabDefaultCompletionType='<C-j>'
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType='<C-n>'
 
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'

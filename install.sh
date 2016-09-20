@@ -13,7 +13,7 @@ brew cask install \
 
 brew install \
     fish \
-    neovim \
+    neovim/neovim/neovim \
     git \
     hub \
     diff-so-fancy \
