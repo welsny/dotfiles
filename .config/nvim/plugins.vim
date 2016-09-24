@@ -13,6 +13,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'hdima/python-syntax'
+Plug 'ivanov/vim-ipython'
+Plug 'fatih/vim-go'
+
 Plug 'sickill/vim-monokai'
 Plug 'junegunn/seoul256.vim'
 
