@@ -14,7 +14,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'hdima/python-syntax'
 Plug 'ivanov/vim-ipython'
+
 Plug 'fatih/vim-go'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 Plug 'sickill/vim-monokai'
 Plug 'junegunn/seoul256.vim'
