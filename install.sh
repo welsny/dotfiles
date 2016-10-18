@@ -19,7 +19,8 @@ brew install \
     git \
     hub \
     diff-so-fancy \
-    python
+    python \
+    golang
 
 pip install \
     ipython \

@@ -13,6 +13,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'hdima/python-syntax'
+Plug 'ivanov/vim-ipython'
+
+Plug 'fatih/vim-go'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
 Plug 'sickill/vim-monokai'
 Plug 'junegunn/seoul256.vim'
 
@@ -33,3 +38,4 @@ let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 map <C-m> :NERDTreeToggle<CR>
+
