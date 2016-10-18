@@ -1,6 +1,7 @@
 # Aliases:
 
 alias vim nvim
+alias tmux 'tmux -2'
 
 # Hardware:
 
@@ -13,4 +14,6 @@ set PATH $PATH /usr/local/Python-3.5.2/bin /tst/src/ext/R/curr/bin/
 export PATH
 
 eval (python -m virtualfish)
+
+set -gx PATH $PATH ~/local/bin
 

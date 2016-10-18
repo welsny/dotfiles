@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if [ -z "$(which pip)" ]; then
     pip install \
         ipython \
