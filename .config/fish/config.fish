@@ -1,6 +1,7 @@
 # Aliases:
 
 alias vim nvim
+alias tmux 'tmux -2'
 
 alias chrome "open -a /Applications/Google\ Chrome.app/"
 alias vlc "open -a /Applications/VLC.app/"
@@ -9,7 +10,6 @@ alias libre "open -a /Applications/LibreOffice.app/"
 
 alias git hub
 alias python ipython
-
 
 # Hardware:
 
@@ -21,3 +21,5 @@ defaults write -g com.apple.mouse.scaling -float 5.0
 # Misc:
 
 eval (python -m virtualfish)
+
+set -gx PATH $PATH ~/local/bin
