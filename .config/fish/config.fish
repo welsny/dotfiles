@@ -2,7 +2,7 @@
 
 alias vim nvim
 
-alias chrome "open -a /Applications/Google Chrome.app/"
+alias chrome "open -a /Applications/Google\ Chrome.app/"
 alias vlc "open -a /Applications/VLC.app/"
 alias word "open -a /Applications/Microsoft\ Word.app/"
 alias libre "open -a /Applications/LibreOffice.app/"

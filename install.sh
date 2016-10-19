@@ -33,3 +33,4 @@ curl --insecure -fLo ~/.config/nvim/autoload/plug.vim \
 vim +PlugInstall +qall
 
 python ~/.config/nvim/plugged/YouCompleteMe/install.py
+

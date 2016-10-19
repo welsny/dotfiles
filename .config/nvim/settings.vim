@@ -3,6 +3,7 @@ set cursorline
 set colorcolumn=120
 
 set expandtab
+set tabstop=4
 set shiftwidth=4
 set ignorecase
 set smartcase
