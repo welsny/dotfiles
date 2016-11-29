@@ -12,6 +12,9 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
 Plug 'hdima/python-syntax'
 Plug 'sickill/vim-monokai'
 Plug 'junegunn/seoul256.vim'
@@ -36,4 +39,6 @@ let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 map <C-m> :NERDTreeToggle<CR>
+let NERDTreeShowLineNumbers = 1
+autocmd FileType nerdtree setlocal rnu
 
