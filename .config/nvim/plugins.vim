@@ -10,10 +10,12 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 Plug 'hdima/python-syntax'
 Plug 'sickill/vim-monokai'
@@ -41,4 +43,11 @@ let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 map <C-m> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers = 1
 autocmd FileType nerdtree setlocal rnu
+
+let g:goyo_width='50%'
+function! s:goyo_enter()
+  set rnu
+endfunction
+
+let vim_markdown_preview_browser='Firefox'
 

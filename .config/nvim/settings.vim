@@ -2,6 +2,7 @@ set number
 set relativenumber
 set cursorline
 set colorcolumn=120
+set nowrap
 
 set expandtab
 set shiftwidth=4
