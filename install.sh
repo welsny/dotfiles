@@ -20,7 +20,7 @@ brew install \
     hub \
     diff-so-fancy \
     python \
-    golang
+    tmux
 
 pip install \
     ipython \

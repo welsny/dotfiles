@@ -15,14 +15,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
-Plug 'JamshedVesuna/vim-markdown-preview'
-
 Plug 'hdima/python-syntax'
 Plug 'ivanov/vim-ipython'
-Plug 'fatih/vim-go'
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
-Plug 'sickill/vim-monokai'
 Plug 'junegunn/seoul256.vim'
 
 call plug#end()
@@ -52,7 +47,4 @@ let g:goyo_width='50%'
 function! s:goyo_enter()
   set rnu
 endfunction
-
-let vim_markdown_preview_browser='Chrome'
-
 
