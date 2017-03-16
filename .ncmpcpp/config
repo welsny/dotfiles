@@ -1,6 +1,9 @@
 
 mpd_music_dir = "~/Music"
 
+user_interface = "alternative"
+progressbar_look = "━━ "
+
 ##### song format #####
 ##
 ## for song format you can use:
@@ -33,7 +36,7 @@ mpd_music_dir = "~/Music"
 ## Note: Format that is similar to "%a - %t" (i.e. without any additional
 ## braces) is equal to "{%a - %t}", so if one of the tags is missing,
 ## you'll get nothing.
-##
+
 ## text can also have different color than the main window has,
 ## eg. if you want length to be green, write $3%l$9
 ##
@@ -51,13 +54,14 @@ mpd_music_dir = "~/Music"
 ## - 9 - end of current color(30)[red]{b}
 ##
 ## Note: colors can be nested.
+##
 
-song_list_format = "{$5%a $9}{$2%t$9}|{$7%f$9}$7$R{%b }{$3%4l$9}$9
-song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
-song_library_format = "{%N - }{%t}|{%f}"
-# tag_editor_album_format = "{(%y) }%b"
-now_playing_prefix = "$b"
+/* song_list_format = "{$5%a $9}{$2%t$9}|{$7%f$9}$7$R{%b }{$3%4l$9}$9 */
+/* song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}" */
+/* song_library_format = "{%N - }{%t}|{%f}" */
+/* now_playing_prefix = "$b" */
 
+##
 ## Note: Below variables are for alternative version of user's interface.
 ## Their syntax supports all tags and colors listed above plus some extra
 ## markers used for text attributes. They are followed by character '$'.
@@ -72,10 +76,12 @@ now_playing_prefix = "$b"
 ## this time insert character '/' between '$' and attribute character,
 ## e.g. {$b%t$/b}|{$r%f$/r} will display bolded title tag or filename
 ## with reversed colors.
+##
 
-alternative_header_first_line_format = "$8$aqqu$/a$b {%t}|{%f} $/b$8$atqq$/a$9"
-alternative_header_second_line_format = "{{$8%a}{$8 - %b$9}{$8 (%y)$8}}|{%D$9}"
+alternative_header_first_line_format = "$b$8$aqqu$/a$9 $2{%t}|{%f}$9 $8$atqq$/a$9$/b"
+alternative_header_second_line_format = "$b$8$aqqu$/a$9 $3{%b}|{%f}$9 $8$atqq$/a$9$/b"
 
+##
 ## syntax of song columns list format is "column column etc."
 ##
 ## - syntax for each column is:
@@ -108,12 +114,10 @@ alternative_header_second_line_format = "{{$8%a}{$8 - %b$9}{$8 (%y)$8}}|{%D$9}"
 ##   creates column named "Owner" that tries to display artist
 ##   tag and then composer and performer if previous ones are
 ##   not available.
-##
-#
+
 song_columns_list_format = "(4)[blue]{n:#} (25)[blue]{a} (40)[blue]{t|f} (30)[blue]{b} (7f)[blue]    {l}"
-#
+
 ##### various settings #####
-#
 ##
 ## Note: Custom command that will be executed each
 ## time song changes. Useful for notifications etc.
@@ -121,8 +125,7 @@ song_columns_list_format = "(4)[blue]{n:#} (25)[blue]{a} (40)[blue]{t|f} (30)[bl
 ## Attention: It doesn't support song format anymore.
 ## Use `ncmpcpp --now-playing SONG_FORMAT` instead.
 ##
-playlist_show_remaining_time = "yes"
-playlist_separate_albums = "yes"
+
 playlist_display_mode = "columns" (classic/columns)
 browser_display_mode = "columns" (classic/columns)
 search_engine_display_mode = "columns" (classic/columns)
@@ -130,85 +133,20 @@ search_engine_display_mode = "columns" (classic/columns)
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 
-# progressbar_look = "=>"
-progressbar_look = "─- "
-# progressbar_look = "▒▒░"
-# progressbar_look = "┅┅┄"
-# progressbar_look = "─⊙┄"
-# progressbar_look = "─➞─"
-# progressbar_look = "─┅─"
-# progressbar_look = "▪▪▪"
-# progressbar_look = "▪▪▫"
-# progressbar_look = "───"
-# progressbar_look = "▁▁▁"
-# progressbar_look = "‒‒‒"
-# progressbar_look = "■◣ "
-# progressbar_look = "◈◆◇"
-
-progressbar_boldness = "no"
 default_place_to_search_in = "database"
-user_interface = "alternative"
-# media_library_left_column = "A"
 header_visibility = "no"
-titles_visibility = "yes"
-
-## Note: If you set this variable, ncmpcpp will try to
-## get info from last.fm in language you set and if it
-## fails, it will fall back to english. Otherwise it wiljl
-## use english the first time.
-##
-## Note: Language has to be expressed as an ISO 639 alpha-2 code.
-
-show_hidden_files_in_local_browser = "no"
-# display_screens_numbers_on_start = "yes"
-
-## How shall key_screen_switcher work?
-##
-## - "previous" - switch between current and last used screen
-## - "sequence: 2 -> 9 -> 5" - switch between given sequence of screens.
-##
-## Screen numbers you can use after 'sequence' keyword are:
-##
-## - 1 - help
-## - 2 - playlist
-## - 3 - browser
-## - 4 - search engine
-## - 5 - media library
-## - 6 - playlist editor
-## - 7 - tag editor
-## - 8 - outputs
-## - 9 - visualizer
-## - 10 - clock
-##
-## As you can see, above example will switch between
-## playlist, visualizer and media library screens.
-
-clock_display_seconds = "yes"
-display_volume_level = "yes"
-display_bitrate = "no"
-display_remaining_time = "yes"
-regular_expressions = "extended"
-##
-## Note: If below is enabled, ncmpcpp will ignore leading
-## "The" word while sorting items in browser, tags in
-## media library, etc.
+titles_visibility = "no"
 
 ignore_leading_the = "yes"
 mouse_support = "no"
 enable_window_title = "yes"
 
-## Note: Below variables can allow you to physically
-## remove files and directories from your hdd using
-## ncmpcpp's browser screen.
-
-external_editor = "vim"
-use_console_editor = "yes"
- 
 ##### colors definitions #####
 colors_enabled = "yes"
 header_window_color = "default"
 main_window_color = "white"
-progressbar_color = "green"
-alternative_ui_separator_color = "red"
+progressbar_color = 8
+alternative_ui_separator_color = "white"
 active_column_color = "red"
+
 
