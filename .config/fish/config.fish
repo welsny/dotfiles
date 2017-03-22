@@ -23,3 +23,4 @@ defaults write -g com.apple.mouse.scaling -float 5.0
 eval (python -m virtualfish)
 
 set -gx PATH $PATH ~/local/bin
+

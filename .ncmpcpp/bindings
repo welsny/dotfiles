@@ -14,6 +14,20 @@ def_key "ctrl-u"
 def_key "ctrl-d"
     page_down
 
+def_key "g"
+    move_home
+
+def_key "G"
+    move_end
+
+def_key "{"
+    scroll_up_album
+def_key "}"
+    scroll_down_album
+
+def_key "ctrl-]"
+    jump_to_browser
+
 # Avoids collision with "l":
 def_key "."
     show_lyrics
