@@ -29,12 +29,13 @@ syntax enable
 
 colorscheme seoul256
 
+let mapleader=','
+
 let python_highlight_all=1
 
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType='<C-n>'
-
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
@@ -46,7 +47,9 @@ map <C-m> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers = 1
 autocmd FileType nerdtree setlocal rnu
 
-let g:goyo_width='50%'
+map <C-g> :GitGutterToggle<CR>
+
+let g:goyo_width='80%'
 function! s:goyo_enter()
   set rnu
 endfunction

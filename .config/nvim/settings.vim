@@ -13,33 +13,36 @@ set smartcase
 noremap <j> gj
 noremap <k> gk
 
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-inoremap jk <esc>
-
+inoremap jk <Esc>
 inoremap <C-a> <C-o>^
 inoremap <C-e> <C-o>$
 inoremap <C-u> <C-o>d^
 inoremap <C-k> <C-o>d$
 inoremap <C-w> <C-o>db
-inoremap <A-b> <C-o>b
-inoremap <A-f> <C-o>e<C-o>l
-inoremap <A-d> <C-o>de<C-o>x
-
-nnoremap <C-h> <C-w><C-h>
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-l> <C-w><C-l>
+inoremap <M-b> <C-o>b
+inoremap <M-f> <C-o>e<C-o>l
+inoremap <M-d> <C-o>de<C-o>x
 
 set splitbelow
 set splitright
 
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+
 command Fish split term://fish
 command Python split term://python
+command Python3 split term://python3
+command PythonI split term://ipython
 command R split term://R
 
 vnoremap <C-s> y<c-w>wp<c-w>p
+
+tmap jk <Esc>
+tnoremap <Esc> <C-\><C-n>
+tnoremap <M-h> <C-\><C-n><C-w>h
+tnoremap <M-j> <C-\><C-n><C-w>j
+tnoremap <M-k> <C-\><C-n><C-w>k
+tnoremap <M-l> <C-\><C-n><C-w>l
 
