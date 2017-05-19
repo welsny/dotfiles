@@ -18,15 +18,16 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-inoremap <C-h> <C-o>h
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <C-l> <C-o>l
-inoremap <C-w> <C-o>w
-inoremap <C-e> <C-o>e
-inoremap <C-b> <C-o>b
-
 inoremap jk <esc>
+
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+inoremap <C-u> <C-o>d^
+inoremap <C-k> <C-o>d$
+inoremap <C-w> <C-o>db
+inoremap <A-b> <C-o>b
+inoremap <A-f> <C-o>e<C-o>l
+inoremap <A-d> <C-o>de<C-o>x
 
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
