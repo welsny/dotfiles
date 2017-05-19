@@ -33,3 +33,12 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 
+set splitbelow
+set splitright
+
+command Fish split term://fish
+command Python split term://python
+command R split term://R
+
+vnoremap <C-s> y<c-w>wp<c-w>p
+

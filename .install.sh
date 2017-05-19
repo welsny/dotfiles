@@ -9,26 +9,45 @@ brew tap \
     caskroom/cask \
     homebrew/science \
 
+# Cask:
 brew cask install \
     google-chrome \
     iterm2 \
     flux \
-    vlc
+    vlc \
+    Caskroom/cask/libreoffice
 
+# Dev:
 brew install \
+    tmux \
+    reattach-to-user-namespace \
     fish \
     neovim/neovim/neovim \
     git \
     hub \
     diff-so-fancy \
     python \
-    tmux
     R
 
 pip install \
     ipython \
     neovim \
     virtualfish
+
+# Music:
+mkdir -p ~/.mpd/playlists
+touch ~/.mpd/mpd{.conf,.db,.log,.pid,state}
+
+brew install \
+    mpd \
+    ncurses \
+    ncmpcpp \
+    youtube-dl \
+    sox
+
+# Other:
+npm install -g \
+    fanyi
 
 chsh -s `which fish`
 
@@ -39,10 +58,4 @@ vim +PlugInstall +qall
 
 python ~/.config/nvim/plugged/YouCompleteMe/install.py
 
-brew install \
-    ncurses
-    mpd
-    ncmpcpp
-
-# cd ~ ; mkdir .mpd ; cd .mpd ; mkdir playlists ; touch mpd.conf mpd.db mpd.log mpd.pid mpdstate
 

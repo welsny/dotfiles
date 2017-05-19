@@ -11,6 +11,7 @@ Plug 'ervandew/supertab'
 
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -19,6 +20,8 @@ Plug 'hdima/python-syntax'
 Plug 'ivanov/vim-ipython'
 
 Plug 'junegunn/seoul256.vim'
+Plug 'dunckr/vim-monokai-soda'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
