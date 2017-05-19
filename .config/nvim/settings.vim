@@ -3,7 +3,6 @@ set relativenumber
 set cursorline
 set colorcolumn=120
 set nowrap
-
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -26,10 +25,16 @@ inoremap <M-d> <C-o>de<C-o>x
 set splitbelow
 set splitright
 
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+nnoremap <M-o> <C-w>w
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
+
+nnoremap <silent> <M-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <M-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <M-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <M-l> :TmuxNavigateRight<CR>
 
 command Fish split term://fish
 command Python split term://python

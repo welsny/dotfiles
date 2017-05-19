@@ -22,6 +22,7 @@ Plug 'ivanov/vim-ipython'
 Plug 'junegunn/seoul256.vim'
 Plug 'dunckr/vim-monokai-soda'
 Plug 'vimwiki/vimwiki'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -33,9 +34,9 @@ let mapleader=','
 
 let python_highlight_all=1
 
+let g:SuperTabDefaultCompletionType='<C-n>'
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType='<C-n>'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
@@ -48,6 +49,9 @@ let NERDTreeShowLineNumbers = 1
 autocmd FileType nerdtree setlocal rnu
 
 map <C-g> :GitGutterToggle<CR>
+
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_disable_when_zoomed = 1
 
 let g:goyo_width='80%'
 function! s:goyo_enter()
