@@ -20,11 +20,6 @@ def_key "g"
 def_key "G"
     move_end
 
-def_key "{"
-    scroll_up_album
-def_key "}"
-    scroll_down_album
-
 def_key "ctrl-]"
     jump_to_browser
 

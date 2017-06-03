@@ -130,7 +130,7 @@ song_columns_list_format = "(10)[black]{l} (30)[blue]{a} (30)[green]{b} (30)[mag
 ## song_columns_list_format = "(5)[]{} (22)[red]{a} (20)[white]{t|f} (49)[blue]{b} (4)[red]{l}"
 
 
-mouse_support = "yes"
+mouse_support = "no"
 header_visibility = "no"
 statusbar_visibility = "yes"
 playlist_display_mode = "classic" (classic/columns)
