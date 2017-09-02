@@ -9,8 +9,8 @@ set shiftwidth=4
 set ignorecase
 set smartcase
 
-noremap <j> gj
-noremap <k> gk
+nnoremap j gj
+nnoremap k gk
 
 inoremap jk <Esc>
 inoremap <C-a> <C-o>^

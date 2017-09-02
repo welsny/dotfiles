@@ -9,7 +9,7 @@ alias vlc "open -a /Applications/VLC.app/"
 alias word "open -a /Applications/Microsoft\ Word.app/"
 alias libre "open -a /Applications/LibreOffice.app/"
 
-alias gmail "for i in 3 1 0 ; chrome https://mail.google.com/mail/u/\$i ; end"
+alias gmail "for i in 0 1 ; chrome https://mail.google.com/mail/u/\$i ; end"
 
 # alias git hub
 # alias python ipython
@@ -24,6 +24,5 @@ defaults write -g com.apple.mouse.scaling -float 5.0
 # Misc:
 
 eval (python -m virtualfish)
-
 set -gx PATH $PATH ~/.scripts/
 
