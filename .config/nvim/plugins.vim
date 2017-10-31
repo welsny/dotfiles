@@ -53,7 +53,8 @@ map <C-g> :GitGutterToggle<CR>
 let g:tmux_navigator_no_mappings = 1
 let g:tmux_navigator_disable_when_zoomed = 1
 
-let g:goyo_width='80%'
+let g:goyo_width='70%'
+let g:goyo_height='70%'
 function! s:goyo_enter()
   set rnu
 endfunction

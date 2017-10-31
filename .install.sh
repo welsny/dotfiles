@@ -15,6 +15,7 @@ brew cask install \
     iterm2 \
     flux \
     vlc \
+    slack\
     Caskroom/cask/libreoffice
 
 # Dev:
@@ -32,7 +33,9 @@ brew install \
 pip install \
     ipython \
     neovim \
-    virtualfish
+    numpy \
+    matplotlib
+
 
 # Music:
 mkdir -p ~/.mpd/playlists
