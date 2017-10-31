@@ -1,6 +1,7 @@
 set number
 set relativenumber
 set cursorline
+set guicursor=
 set colorcolumn=120
 set nowrap
 set expandtab
