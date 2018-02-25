@@ -18,7 +18,7 @@ brew cask install \
     slack\
     Caskroom/cask/libreoffice
 
-# Dev:
+# Dev Packages:
 brew install \
     tmux \
     reattach-to-user-namespace \
@@ -27,15 +27,18 @@ brew install \
     git \
     hub \
     diff-so-fancy \
-    python \
+    python3 \
     R
 
-pip install \
+pip3 install \
+    jupyter \
+    jupyterthemes \
     ipython \
     neovim \
+    pandas \ 
     numpy \
-    matplotlib
-
+    matplotlib \
+    seaborn
 
 # Music:
 mkdir -p ~/.mpd/playlists
@@ -49,10 +52,18 @@ brew install \
     sox
 
 # Other:
-npm install -g \
-    fanyi
+# npm install -g \
+#     fanyi
+
+# Dev Config: 
 
 chsh -s `which fish`
+
+hub clone lambdalisue/jupyter-vim-binding $(jupyter --data-dir)/nbextensions/vim_binding
+jupyter nbextension enable vim_binding/vim_binding
+
+jt -t oceans16
+jt -t onedork -vim
 
 mkdir -p ~/.config/nvim/autoload
 curl --insecure -fLo ~/.config/nvim/autoload/plug.vim \
@@ -60,5 +71,4 @@ curl --insecure -fLo ~/.config/nvim/autoload/plug.vim \
 vim +PlugInstall +qall
 
 python ~/.config/nvim/plugged/YouCompleteMe/install.py
-
 
