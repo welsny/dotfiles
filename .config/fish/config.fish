@@ -19,11 +19,14 @@ alias foodtrucks "open ~/Desktop/neu_food_truck.png"
 
 # Hardware:
 
-# OSX Mouse/Trackpad Acceleration:
+# macOS Mouse/Trackpad Acceleration:
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
 defaults write -g com.apple.trackpad.scaling -float 5.0
 defaults write -g com.apple.mouse.scaling -float 5.0
-  
+
+# macOS Dįśãbłę Çhãrãçtęr Åççęñt Męñü
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Misc:
 
 if not pgrep Bartender > /dev/null
