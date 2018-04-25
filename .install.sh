@@ -18,7 +18,7 @@ brew cask install \
     slack\
     Caskroom/cask/libreoffice
 
-# Dev Packages:
+# Dev:
 brew install \
     tmux \
     reattach-to-user-namespace \
@@ -28,7 +28,7 @@ brew install \
     hub \
     diff-so-fancy \
     python3 \
-    R
+    m-cli
 
 pip3 install \
     jupyter \
@@ -51,7 +51,15 @@ brew install \
     youtube-dl \
     sox
 
-# Other:
+# Misc:
+brew tap crisidev/homebrew-chunkwm
+brew install \
+    chunkwm \
+    koekeishiya/formulae/skhd
+brew start \
+    chunkwm
+    skhd
+
 # npm install -g \
 #     fanyi
 
