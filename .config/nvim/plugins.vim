@@ -20,7 +20,10 @@ Plug 'hdima/python-syntax'
 Plug 'ivanov/vim-ipython'
 
 Plug 'junegunn/seoul256.vim'
+Plug 'nerdpad/dracula-vim'
 Plug 'dunckr/vim-monokai-soda'
+Plug 'morhetz/gruvbox'
+Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'vimwiki/vimwiki'
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -28,7 +31,8 @@ call plug#end()
 
 syntax enable
 
-colorscheme seoul256
+colo dracula
+colo gruvbox
 
 let mapleader=','
 

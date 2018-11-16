@@ -8,6 +8,7 @@ set -e
 brew tap \
     caskroom/cask \
     homebrew/science \
+    crisidev/homebrew-chunkwm \
 
 # Cask:
 brew cask install \
@@ -16,7 +17,7 @@ brew cask install \
     flux \
     vlc \
     slack\
-    Caskroom/cask/libreoffice
+    Caskroom/cask/libreoffice \
 
 # Dev:
 brew install \
@@ -28,7 +29,7 @@ brew install \
     hub \
     diff-so-fancy \
     python3 \
-    m-cli
+    m-cli \
 
 pip3 install \
     jupyter \
@@ -38,7 +39,7 @@ pip3 install \
     pandas \ 
     numpy \
     matplotlib \
-    seaborn
+    seaborn \
 
 # Music:
 mkdir -p ~/.mpd/playlists
@@ -49,16 +50,17 @@ brew install \
     ncurses \
     ncmpcpp \
     youtube-dl \
-    sox
+    sox \
 
 # Misc:
-brew tap crisidev/homebrew-chunkwm
+
 brew install \
     chunkwm \
-    koekeishiya/formulae/skhd
+    koekeishiya/formulae/skhd \
+
 brew start \
-    chunkwm
-    skhd
+    chunkwm \
+    skhd \
 
 # npm install -g \
 #     fanyi

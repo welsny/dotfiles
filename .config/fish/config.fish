@@ -14,6 +14,8 @@ alias gstatic "open -a /Applications/Safari.app https://gstatic.com/generate_204
 alias apps "chrome https://docs.google.com/spreadsheets/d/1tK90C7US4z-mQc-DbhiEBNQ6a6S0Yyv85MrWmKxIJ8E/edit#gid=0"
 alias news "for i in Biolfit9JkE yk2CUjbyyQY Fu2etwHzcvw ; chrome https://www.youtube.com/watch\?v=\$i ; end"
 
+alias foodtrucks "open ~/Pictures/foodtrucks.png"
+
 # alias git hub
 # alias python ipython
 
