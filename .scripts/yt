@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+import fire
+
+def yt_main(*search_terms):
+    """
+    Opens YouTube search in Chrome.
+    """
+
+    chrome = "/Applications/Google Chrome.app/"
+
+    if not os.path.isdir(chrome):
+        print('Chrome is not installed -- run `brew cask install google-chrome`')
+
+    query = '+'.join(search_terms)
+    os.system(f"open -a \"{chrome}\" https://www.youtube.com/results?search_query={query}")
+
+if __name__ == "__main__":
+    fire.Fire(yt_main)
+

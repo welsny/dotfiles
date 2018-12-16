@@ -4,7 +4,7 @@
 import os
 import glob
 import fire
-import shlex
+import shlex # Handle `'` and `"` in filenames.
 
 MUSIC_DIR = os.path.expanduser('~/Music/wav')
 
