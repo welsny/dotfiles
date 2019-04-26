@@ -43,6 +43,7 @@ command Python3 split term://python3
 command PythonI split term://ipython
 command R split term://R
 
+" `Send`
 vnoremap <C-s> y<c-w>wp<c-w>p
 
 tmap jk <Esc>

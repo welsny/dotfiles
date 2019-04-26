@@ -12,13 +12,12 @@ alt - s : chunkc tiling::desktop --layout monocle
 # shift + alt - q : chunkc tiling::window --close
 
 # change focus
-alt - h : chunkc tiling::window --focus west
-alt - j : chunkc tiling::window --focus south
-alt - k : chunkc tiling::window --focus north
-alt - l : chunkc tiling::window --focus east
+shift + alt - h : chunkc tiling::window --focus west
+shift + alt - j : chunkc tiling::window --focus south
+shift + alt - k : chunkc tiling::window --focus north
+shift + alt - l : chunkc tiling::window --focus east
 
-shift + alt - o : chunkc tiling::window --focus prev
-alt - o : chunkc tiling::window --focus next
+shift + alt - o : chunkc tiling::window --focus next
 
 # move focused window
 shift + alt - h : chunkc tiling::window --warp west
@@ -27,5 +26,5 @@ shift + alt - k : chunkc tiling::window --warp north
 shift + alt - l : chunkc tiling::window --warp east
 
 alt - space : chunkc tiling::desktop --rotate 90
-shift + alt - space : chunkc tiling::desktop --rotate 270
+# shift + alt - space : chunkc tiling::desktop --rotate 270
 

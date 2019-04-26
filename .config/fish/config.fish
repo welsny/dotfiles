@@ -2,14 +2,15 @@
 
 alias vim nvim
 alias tmux "tmux -2"
-alias lt "ls -altr"
+alias lt "ls -altrh"
 
 alias chrome "open -a /Applications/Google\ Chrome.app/"
 alias vlc "open -a /Applications/VLC.app/"
 alias word "open -a /Applications/Microsoft\ Word.app/"
 alias libre "open -a /Applications/LibreOffice.app/"
 
-alias gmail "for i in 0 1 ; chrome https://mail.google.com/mail/u/\$i ; end"
+alias gmail "chrome https://mail.google.com/mail/u/0; chrome https:/mail.google.com/mail/u/1"
+alias gcal "chrome https://calendar.google.com"
 alias gstatic "open -a /Applications/Safari.app https://gstatic.com/generate_204"
 alias apps "chrome https://docs.google.com/spreadsheets/d/1tK90C7US4z-mQc-DbhiEBNQ6a6S0Yyv85MrWmKxIJ8E/edit#gid=0"
 alias news "for i in Biolfit9JkE yk2CUjbyyQY Fu2etwHzcvw ; chrome https://www.youtube.com/watch\?v=\$i ; end"
