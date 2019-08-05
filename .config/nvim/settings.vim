@@ -36,6 +36,14 @@ nnoremap <silent> <M-h> :TmuxNavigateLeft<CR>
 nnoremap <silent> <M-j> :TmuxNavigateDown<CR>
 nnoremap <silent> <M-k> :TmuxNavigateUp<CR>
 nnoremap <silent> <M-l> :TmuxNavigateRight<CR>
+" TODO: Fix conflicts with SKHD
+nnoremap <silent> <M-i> :Goyo<CR>
+nnoremap <silent> <M-Space> <C-w>r
+
+map <C-m> :NERDTreeToggle<CR>
+map <C-g> :GitGutterToggle<CR>
+
+set shell=/bin/bash\ -i
 
 command Fish split term://fish
 command Python split term://python

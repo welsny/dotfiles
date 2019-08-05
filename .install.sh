@@ -52,6 +52,10 @@ brew install \
     youtube-dl \
     sox \
 
+pip3 install scdl\
+    osxmpdkeys \
+    nbdime \
+
 # Misc:
 
 brew install \

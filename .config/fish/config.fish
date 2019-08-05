@@ -32,8 +32,8 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Misc:
 
+set -x HOMEBREW_EDITOR nvim
 if not pgrep Bartender > /dev/null
     open -a /Applications/Bartender\ 2.app/
 end
-set -gx PATH $PATH ~/.scripts/
 
