@@ -9,13 +9,13 @@ alias vlc "open -a /Applications/VLC.app/"
 alias word "open -a /Applications/Microsoft\ Word.app/"
 alias libre "open -a /Applications/LibreOffice.app/"
 
-alias gmail "chrome https://mail.google.com/mail/u/0; chrome https:/mail.google.com/mail/u/1"
-alias gcal "chrome https://calendar.google.com"
+alias gmail "chrome https://mail.google.com/mail/u/0; chrome https:/mail.google.com/mail/u/1; chrome https://calendar.google.com"
 alias gstatic "open -a /Applications/Safari.app https://gstatic.com/generate_204"
-alias apps "chrome https://docs.google.com/spreadsheets/d/1tK90C7US4z-mQc-DbhiEBNQ6a6S0Yyv85MrWmKxIJ8E/edit#gid=0"
-alias news "for i in Biolfit9JkE yk2CUjbyyQY Fu2etwHzcvw ; chrome https://www.youtube.com/watch\?v=\$i ; end"
 
-alias foodtrucks "open ~/Pictures/foodtrucks.png"
+alias dev "cd ~/development"
+alias uc "cd ~/development/urbancompass"
+alias af "cd ~/development/di-airflow"
+alias lrl "cd ~/development/listing-ranking-l1"
 
 # alias git hub
 # alias python ipython
@@ -33,7 +33,9 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Misc:
 
 set -x HOMEBREW_EDITOR nvim
-if not pgrep Bartender > /dev/null
-    open -a /Applications/Bartender\ 2.app/
-end
 
+function pyclean
+    git clean -fdx ./build-support/python ./tests/python && rm -rf .pants.d/ && ./shorts clean && ./shorts gen
+    find ./src/python ./tests/python -type f -name "*.py[co]" -delete
+    find ./src/python ./tests/python -type d -name "__pycache__" -delete
+end
