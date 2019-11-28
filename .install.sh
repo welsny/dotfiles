@@ -18,6 +18,7 @@ brew cask install \
     vlc \
     slack\
     Caskroom/cask/libreoffice \
+    alfred \
 
 # Dev:
 brew install \
@@ -30,6 +31,7 @@ brew install \
     diff-so-fancy \
     python3 \
     m-cli \
+    pynvim \
 
 pip3 install \
     jupyter \

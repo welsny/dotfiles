@@ -5,8 +5,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'zxqfl/tabnine-vim'
+Plug 'w0rp/ale'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" Plug 'zxqfl/tabnine-vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
@@ -14,14 +17,12 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 Plug 'sheerun/vim-polyglot'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 Plug 'junegunn/seoul256.vim'
 Plug 'joshdick/onedark.vim'
@@ -68,14 +69,22 @@ let g:tmux_navigator_no_mappings = 1
 let g:tmux_navigator_disable_when_zoomed = 1
 
 let g:goyo_width='85%'
-let g:goyo_height='70%'
+let g:goyo_height='85%'
 
 function! s:goyo_enter()
+  " if executable('tmux') && strlen($TMUX)
+    " silent !tmux set status off
+    " silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  " endif
   set nu
   set rnu
 endfunction
 
 function! s:goyo_leave()
+  " if executable('tmux') && strlen($TMUX)
+    " silent !tmux set status on
+    " silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  " endif
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
