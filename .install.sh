@@ -6,8 +6,6 @@ set -e
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap \
-    caskroom/cask \
-    homebrew/science \
     crisidev/homebrew-chunkwm \
 
 # Cask:
@@ -25,7 +23,7 @@ brew install \
     tmux \
     reattach-to-user-namespace \
     fish \
-    neovim/neovim/neovim \
+    neovim \
     git \
     hub \
     diff-so-fancy \
