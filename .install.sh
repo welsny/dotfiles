@@ -41,6 +41,11 @@ pip3 install \
     matplotlib \
     seaborn \
 
+curl -L https://get.oh-my.fish | fish
+
+omf install \
+    aws \
+
 # Music:
 mkdir -p ~/.mpd/playlists
 touch ~/.mpd/mpd{.conf,.db,.log,.pid,state}
