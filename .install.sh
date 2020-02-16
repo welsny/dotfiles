@@ -61,6 +61,14 @@ pip3 install scdl\
     osxmpdkeys \
     nbdime \
 
+# Jupyter
+
+hub clone lambdalisue/jupyter-vim-binding $(jupyter --data-dir)/nbextensions/vim_binding
+jupyter nbextension enable vim_binding/vim_binding
+
+jt -t oceans16
+jt -t onedork -vim
+
 # Misc:
 
 brew install \
@@ -71,18 +79,9 @@ brew start \
     chunkwm \
     skhd \
 
-# npm install -g \
-#     fanyi
-
 # Dev Config: 
 
 chsh -s `which fish`
-
-hub clone lambdalisue/jupyter-vim-binding $(jupyter --data-dir)/nbextensions/vim_binding
-jupyter nbextension enable vim_binding/vim_binding
-
-jt -t oceans16
-jt -t onedork -vim
 
 mkdir -p ~/.config/nvim/autoload
 curl --insecure -fLo ~/.config/nvim/autoload/plug.vim \

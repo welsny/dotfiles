@@ -12,11 +12,6 @@ alias libre "open -a /Applications/LibreOffice.app/"
 alias gmail "chrome https://mail.google.com/mail/u/0; chrome https:/mail.google.com/mail/u/1; chrome https://calendar.google.com"
 alias gstatic "open -a /Applications/Safari.app https://gstatic.com/generate_204"
 
-alias dev "cd ~/development"
-alias uc "cd ~/development/urbancompass"
-alias af "cd ~/development/di-airflow"
-alias lrl "cd ~/development/listing-ranking-l1"
-
 # alias git hub
 # alias python ipython
 
@@ -33,9 +28,3 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Misc:
 
 set -x HOMEBREW_EDITOR nvim
-
-function pyclean
-    git clean -fdx ./build-support/python ./tests/python && rm -rf .pants.d/ && ./shorts clean && ./shorts gen
-    find ./src/python ./tests/python -type f -name "*.py[co]" -delete
-    find ./src/python ./tests/python -type d -name "__pycache__" -delete
-end
