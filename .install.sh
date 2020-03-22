@@ -3,7 +3,7 @@
 set -e
 
 [ -z "$(which brew)" ] &&
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 brew tap \
     crisidev/homebrew-chunkwm \
@@ -29,7 +29,7 @@ brew install \
     diff-so-fancy \
     python3 \
     m-cli \
-    pynvim \
+    cmake \
 
 pip3 install \
     jupyter \
@@ -40,6 +40,7 @@ pip3 install \
     numpy \
     matplotlib \
     seaborn \
+    pynvim \
 
 curl -L https://get.oh-my.fish | fish
 
@@ -81,6 +82,7 @@ brew start \
 
 # Dev Config: 
 
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s `which fish`
 
 mkdir -p ~/.config/nvim/autoload
