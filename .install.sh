@@ -6,7 +6,7 @@ set -e
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 brew tap \
-    crisidev/homebrew-chunkwm \
+    koekeishiya/formulae \
 
 # Cask:
 brew cask install \
@@ -17,6 +17,8 @@ brew cask install \
     slack\
     Caskroom/cask/libreoffice \
     alfred \
+    bartender \
+    istat-menus \
 
 # Dev:
 brew install \
@@ -73,7 +75,7 @@ jt -t onedork -vim
 # Misc:
 
 brew install \
-    chunkwm \
+    yabai \
     koekeishiya/formulae/skhd \
 
 brew start \
@@ -91,4 +93,6 @@ curl --insecure -fLo ~/.config/nvim/autoload/plug.vim \
 vim +PlugInstall +qall
 
 python ~/.config/nvim/plugged/YouCompleteMe/install.py
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
