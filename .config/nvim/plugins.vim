@@ -44,6 +44,8 @@ colo gruvbox
 
 let mapleader=','
 
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 

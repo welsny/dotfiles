@@ -30,6 +30,7 @@ brew install \
     python3 \
     m-cli \
     pynvim \
+    the_silver_searcher \
 
 pip3 install \
     jupyter \
