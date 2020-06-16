@@ -31,8 +31,11 @@ brew install \
     diff-so-fancy \
     python3 \
     m-cli \
+    htop \
     cmake \
     the_silver_searcher \
+    tree \
+    npm \
 
 pip3 install \
     jupyter \
@@ -44,6 +47,14 @@ pip3 install \
     matplotlib \
     seaborn \
     pynvim \
+
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+open AWSCLIV2.pkg
+
+npm install -g \
+    aws-cdk \
+
+pip install --upgrade aws-cdk.core
 
 curl -L https://get.oh-my.fish | fish
 
@@ -76,6 +87,7 @@ jt -t onedork -vim
 # Misc:
 
 brew install \
+    cmatrix \
     yabai \
     koekeishiya/formulae/skhd \
 
@@ -91,7 +103,7 @@ chsh -s `which fish`
 mkdir -p ~/.config/nvim/autoload
 curl --insecure -fLo ~/.config/nvim/autoload/plug.vim \
     https://raw.github.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall +qall
+nvim +PlugInstall +qall
 
 python ~/.config/nvim/plugged/YouCompleteMe/install.py
 
