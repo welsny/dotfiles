@@ -38,12 +38,16 @@ brew install \
     npm \
 
 pip3 install \
-    jupyter \
-    jupyterthemes \
     ipython \
     neovim \
+    flake8 \
+    mypy \
     pandas \ 
     numpy \
+    scipy \
+    scikit-learn \
+    jupyter \
+    jupyterthemes \
     matplotlib \
     seaborn \
     pynvim \
