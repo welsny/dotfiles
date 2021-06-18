@@ -161,11 +161,13 @@ state_flags_color = "white"
 #
 main_window_color = "blue"
 
-main_window_highlight_color = "blue"
+current_item_prefix = "$(blue)$r"
+current_item_suffix = "$/r$(end)"
 progressbar_color = "black"
 progressbar_elapsed_color = "green"
 statusbar_color = "red"
 alternative_ui_separator_color = "white"
-active_column_color = "white"
+current_item_inactive_column_prefix = "$(white)$r"
+current_item_inactive_column_suffix = "$/r$(end)"
 active_window_border = "red"
 #

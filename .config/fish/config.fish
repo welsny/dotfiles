@@ -20,7 +20,7 @@ alias gstatic "open -a /Applications/Safari.app https://gstatic.com/generate_204
 # macOS Mouse/Trackpad Acceleration:
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
 defaults write -g com.apple.trackpad.scaling -float 5.0
-defaults write -g com.apple.mouse.scaling -float 5.0
+defaults write -g com.apple.mouse.scaling -float 7.0
 
 # macOS Dįśãbłę Çhãrãçtęr Åççęñt Męñü
 defaults write -g ApplePressAndHoldEnabled -bool false

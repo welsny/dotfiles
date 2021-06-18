@@ -56,6 +56,7 @@ vnoremap <C-s> y<c-w>wp<c-w>p
 
 tmap jk <Esc>
 tnoremap <Esc> <C-\><C-n>
+tnoremap <M-o> <C-w>w
 tnoremap <M-h> <C-\><C-n><C-w>h
 tnoremap <M-j> <C-\><C-n><C-w>j
 tnoremap <M-k> <C-\><C-n><C-w>k

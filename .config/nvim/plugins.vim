@@ -5,11 +5,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-" Plug 'zxqfl/tabnine-vim'
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
@@ -31,7 +31,6 @@ Plug 'kaicataldo/material.vim'
 Plug 'hzchirs/vim-material'
 Plug 'dunckr/vim-monokai-soda'
 Plug 'morhetz/gruvbox'
-Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'vimwiki/vimwiki'
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -53,6 +52,9 @@ let g:ale_linters = {'python': ['mypy', 'flake8']}
 let g:ale_python_mypy_options = '--follow-imports skip'
 let g:ale_fixers = {'python': ['black']}
 let g:ale_flake8_options = 'max-line-length = 120'
+
+nmap <silent> <C-j> <Plug>(coc-diagnostic-next-error)
+nmap <silent> <C-j> <Plug>(coc-diagnostic-prev-error)
 
 let g:SuperTabDefaultCompletionType='<C-n>'
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
