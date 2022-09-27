@@ -31,7 +31,8 @@ Plug 'kaicataldo/material.vim'
 Plug 'hzchirs/vim-material'
 Plug 'dunckr/vim-monokai-soda'
 Plug 'morhetz/gruvbox'
-Plug 'vimwiki/vimwiki'
+Plug 'sainnhe/everforest'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
