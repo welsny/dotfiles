@@ -99,6 +99,11 @@ brew start \
     chunkwm \
     skhd \
 
+brew install
+    qmk/qmk/qmk \
+
+qmk setup
+
 # Dev Config: 
 
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
