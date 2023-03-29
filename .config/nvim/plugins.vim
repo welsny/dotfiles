@@ -7,23 +7,40 @@ Plug 'tpope/vim-fugitive'
 
 " Plug 'w0rp/ale'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ervandew/supertab'
+
+" go/nvim-fig
+Plug 'ojroques/nvim-osc52'
+
+" go/telescope-codesearch
+Plug 'nvim-lua/plenary.nvim'           " lua helpers
+Plug 'nvim-telescope/telescope.nvim'   " actual plugin
+Plug 'kyazdani42/nvim-web-devicons'
+
+" Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 
+" Navigation and Status
+Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
 
+" Version Control
+Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
+
+" Utils
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'sheerun/vim-polyglot'
-
+" Colors
 Plug 'junegunn/seoul256.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'nerdpad/dracula-vim'
@@ -33,7 +50,6 @@ Plug 'dunckr/vim-monokai-soda'
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/everforest'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 

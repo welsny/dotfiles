@@ -40,6 +40,7 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<CR>
 nnoremap <silent> <M-i> :Goyo<CR>
 nnoremap <silent> <M-Space> <C-w>r
 
+nnoremap <CR> :NERDTreeToggle<CR>
 map <C-m> :NERDTreeToggle<CR>
 map <C-g> :GitGutterToggle<CR>
 
