@@ -39,6 +39,7 @@ Plug 'mhinz/vim-signify'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'farmergreg/vim-lastplace'
 
 " Colors
 Plug 'junegunn/seoul256.vim'
