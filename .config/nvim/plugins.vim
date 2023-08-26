@@ -71,8 +71,43 @@ let g:ale_python_mypy_options = '--follow-imports skip'
 let g:ale_fixers = {'python': ['black']}
 let g:ale_flake8_options = 'max-line-length = 120'
 
-nmap <silent> <C-j> <Plug>(coc-diagnostic-next-error)
-nmap <silent> <C-j> <Plug>(coc-diagnostic-prev-error)
+let g:signify_skip_filename_pattern = ['\.pipertmp.*']
+
+" Required for operations modifying multiple buffers like rename.
+" set hidden
+
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["java"] }
+
+let g:coc_global_extensions = [
+  \ 'coc-ultisnips' ]
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+
+" gh - get hint on whatever's under the cursor
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+let g:UltiSnipsExpandTrigger='<C-g>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 let g:SuperTabDefaultCompletionType='<C-n>'
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
