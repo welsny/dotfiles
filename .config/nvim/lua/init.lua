@@ -57,15 +57,15 @@ nmap("<M-k>", ":TmuxNavigateUp<CR>")
 nmap("<M-l>", ":TmuxNavigateRight<CR>")
 -- TODO: Fix conflicts with SKHD
 nmap("<M-i>", ":Goyo<CR>")
-nmap("<M-Space>" "<C-w>r")
+nmap("<M-Space>", "<C-w>r")
 
 -- tmap jk <Esc>
-tmap("<Esc>", "<C-\><C-n>")
+tmap("<Esc>", "<C-\\><C-n>")
 tmap("<M-o>", "<C-w>w")
-tmap("<M-h>", "<C-\><C-n><C-w>h")
-tmap("<M-j>", "<C-\><C-n><C-w>j")
-tmap("<M-k>", "<C-\><C-n><C-w>k")
-tmap("<M-l>", "<C-\><C-n><C-w>l")
+tmap("<M-h>", "<C-\\><C-n><C-w>h")
+tmap("<M-j>", "<C-\\><C-n><C-w>j")
+tmap("<M-k>", "<C-\\><C-n><C-w>k")
+tmap("<M-l>", "<C-\\><C-n><C-w>l")
 
 -- Disable Ex mode:
 nmap("Q", "<Nop>")
