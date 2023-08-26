@@ -1,30 +1,7 @@
-set number
-set relativenumber
-set cursorline
+" set shell=/bin/bash\ -i
+
 set guicursor=
 set colorcolumn=120
-set nowrap
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set ignorecase
-set smartcase
-
-nnoremap j gj
-nnoremap k gk
-
-inoremap jk <Esc>
-inoremap <C-a> <C-o>^
-inoremap <C-e> <C-o>$
-inoremap <C-u> <C-o>d^
-inoremap <C-k> <C-o>d$
-inoremap <C-w> <C-o>db
-inoremap <M-b> <C-o>b
-inoremap <M-f> <C-o>e<C-o>l
-inoremap <M-d> <C-o>de<C-o>x
-
-set splitbelow
-set splitright
 
 nnoremap <M-o> <C-w>w
 " nnoremap <C-h> <C-w>h
