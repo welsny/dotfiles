@@ -1,3 +1,3 @@
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/settings.vim
-lua require('init')
+lua require('settings')
