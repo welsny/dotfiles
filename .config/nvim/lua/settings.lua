@@ -26,7 +26,7 @@ function imap(shortcut, command)
 end
 
 function tmap(shortcut, command)
-  map('i', shortcut, command)
+  map('t', shortcut, command)
 end
 
 nmap("j", "gj")
