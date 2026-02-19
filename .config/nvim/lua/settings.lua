@@ -1,6 +1,10 @@
 -- This is just a shortcut that allows us to use `o` as an alias for `vim.opt`
 local o = vim.opt
 
+o.guicursor = ""
+o.colorcolumn = "120"
+o.shell = "/bin/bash -i"
+
 o.number = true
 o.relativenumber = true
 o.cursorline = true
@@ -67,8 +71,22 @@ tmap("<M-j>", "<C-\\><C-n><C-w>j")
 tmap("<M-k>", "<C-\\><C-n><C-w>k")
 tmap("<M-l>", "<C-\\><C-n><C-w>l")
 
+vim.api.nvim_create_user_command('Fish', 'split term://fish', {})
+vim.api.nvim_create_user_command('Python', 'split term://python', {})
+vim.api.nvim_create_user_command('Python3', 'split term://python3', {})
+vim.api.nvim_create_user_command('PythonI', 'split term://ipython', {})
+vim.api.nvim_create_user_command('R', 'split term://R', {})
+
+-- `Send` (Visual mode copy to other window)
+vim.api.nvim_set_keymap('v', '<C-s>', 'y<C-w>wp<C-w>p', { noremap = true })
+
 -- Disable Ex mode:
 nmap("Q", "<Nop>")
+
+-- NERDTree & GitGutter
+nmap("<CR>", ":NERDTreeToggle<CR>")
+nmap("<C-m>", ":NERDTreeToggle<CR>")
+nmap("<C-g>", ":GitGutterToggle<CR>")
 
 -- Enable syntax highlighting
 vim.cmd('syntax enable')
