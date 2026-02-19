@@ -3,7 +3,7 @@ local o = vim.opt
 
 o.guicursor = ""
 o.colorcolumn = "120"
-o.shell = "/bin/bash -i"
+o.shell = "/bin/bash"
 
 o.number = true
 o.relativenumber = true
@@ -15,7 +15,7 @@ o.shiftwidth = 4
 o.ignorecase = true
 o.smartcase = true
 o.autochdir = true
-o.updatetime=100
+o.updatetime = 100
 
 function map(mode, shortcut, command)
   vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
@@ -50,26 +50,21 @@ o.splitbelow = true
 o.splitright = true
 
 nmap("<M-o>", "<C-w>w")
--- nmap("<C-h>", "<C-w>h")
--- nmap("<C-j>", "<C-w>j")
--- nmap("<C-k>", "<C-w>k")
--- nmap("<C-l>", "<C-w>l")
 
 nmap("<M-h>", ":TmuxNavigateLeft<CR>")
 nmap("<M-j>", ":TmuxNavigateDown<CR>")
 nmap("<M-k>", ":TmuxNavigateUp<CR>")
 nmap("<M-l>", ":TmuxNavigateRight<CR>")
--- TODO: Fix conflicts with SKHD
+
 nmap("<M-i>", ":Goyo<CR>")
 nmap("<M-Space>", "<C-w>r")
 
--- tmap jk <Esc>
-tmap("<Esc>", "<C-\\><C-n>")
+tmap("<Esc>", [[<C-\><C-n>]])
 tmap("<M-o>", "<C-w>w")
-tmap("<M-h>", "<C-\\><C-n><C-w>h")
-tmap("<M-j>", "<C-\\><C-n><C-w>j")
-tmap("<M-k>", "<C-\\><C-n><C-w>k")
-tmap("<M-l>", "<C-\\><C-n><C-w>l")
+tmap("<M-h>", [[<C-\><C-n><C-w>h]])
+tmap("<M-j>", [[<C-\><C-n><C-w>j]])
+tmap("<M-k>", [[<C-\><C-n><C-w>k]])
+tmap("<M-l>", [[<C-\><C-n><C-w>l]])
 
 vim.api.nvim_create_user_command('Fish', 'split term://fish', {})
 vim.api.nvim_create_user_command('Python', 'split term://python', {})
@@ -91,10 +86,43 @@ nmap("<C-g>", ":GitGutterToggle<CR>")
 -- Enable syntax highlighting
 vim.cmd('syntax enable')
 
--- Delay colorscheme to ensure Lazy has loaded it
-vim.schedule(function()
-  pcall(vim.cmd, 'colorscheme gruvbox')
-end)
+-- Python Provider Setup
+vim.g.python3_host_prog = '/opt/homebrew/bin/python3'
+
+-- ALE (Linter/Fixer) Settings
+vim.g.ale_linters = { python = { 'mypy', 'flake8' } }
+vim.g.ale_python_mypy_options = '--follow-imports skip'
+vim.g.ale_fixers = { python = { 'black' } }
+vim.g.ale_flake8_options = 'max-line-length = 120'
+
+-- Snippet & Completion Settings (UltiSnips / SuperTab)
+vim.g.UltiSnipsExpandTrigger = '<tab>'
+vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
+vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
+vim.g.SuperTabDefaultCompletionType = '<C-n>'
+
+-- Signify mapping fix (E1098 workaround)
+vim.cmd([[let g:signify_skip_filename_pattern = { '\.pipertmp.*': 1 }]])
+
+-- CtrlP
+vim.g.ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' }
+
+-- UI Settings
+vim.opt.signcolumn = "yes"
+vim.opt.shell = "/bin/bash"
+
+-- Set colorscheme
+vim.cmd('colorscheme gruvbox')
 
 -- Set leader key
 vim.g.mapleader = ','
+
+-- Goyo Autocmd
+vim.api.nvim_create_autocmd("User", {
+  pattern = "GoyoEnter",
+  nested = true,
+  callback = function()
+    vim.opt.number = true
+    vim.opt.relativenumber = true
+  end,
+})

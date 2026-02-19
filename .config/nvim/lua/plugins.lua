@@ -39,8 +39,9 @@ return {
   'airblade/vim-gitgutter',
   {
     'mhinz/vim-signify',
-    init = function()
-      vim.g.signify_skip_filename_pattern = { [".pipertmp.*"] = 1 }
+    config = function()
+      -- Fix for E1098: Use raw Vimscript to set the pattern exactly as expected
+      vim.cmd([[let g:signify_skip_filename_pattern = { '\.pipertmp.*': 1 }]])
     end
   },
   'vim-airline/vim-airline',
