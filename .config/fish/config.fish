@@ -28,3 +28,19 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Misc:
 
 set -x HOMEBREW_EDITOR nvim
+# fish_add_path /opt/homebrew/bin
+# eval (/opt/homebrew/bin/brew shellenv)
+
+# eval "$(/usr/local/bin/brew shellenv fish)"
+
+if test -d /opt/homebrew/bin
+    eval (/opt/homebrew/bin/brew shellenv)
+end
+
+eval "$(/opt/homebrew/bin/brew shellenv fish)"
+
+alias wm-start="yabai &; skhd &; borders active_color=0xff7aa2f7 inactive_color=0xff3b4252 width=2.0 &"
+alias wm-restart="pkill -9 yabai; pkill -9 skhd; wm-start"
+
+# OpenClaw Completion
+source "/Users/lola/.openclaw/completions/openclaw.fish"

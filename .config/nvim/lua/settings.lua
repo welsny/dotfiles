@@ -69,3 +69,9 @@ tmap("<M-l>", "<C-\\><C-n><C-w>l")
 
 -- Disable Ex mode:
 nmap("Q", "<Nop>")
+
+-- Enable syntax highlighting
+vim.cmd('syntax enable')
+
+-- Set leader key
+vim.g.mapleader = ','

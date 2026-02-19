@@ -22,7 +22,7 @@ Plug 'nvim-telescope/telescope.nvim'   " actual plugin
 Plug 'kyazdani42/nvim-web-devicons'
 
 " Snippets
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 

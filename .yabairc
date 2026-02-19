@@ -1,42 +1,42 @@
 #!/usr/bin/env sh
 
-sudo yabai --load-sa
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+# ==============================================================================
+# YABAI CONFIGURATION (v7.0+ Compatible)
+# ==============================================================================
 
-# global settings
+# Global Settings
+yabai -m config focus_follows_mouse          autoraise
 yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
-yabai -m config window_placement             second_child
-yabai -m config window_topmost               off
-yabai -m config window_shadow                on
+
+# Window Appearance (Opacity is still supported)
 yabai -m config window_opacity               on
-yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.92
-yabai -m config window_border                off
-# yabai -m config window_border_width          4
-# yabai -m config active_window_border_color   0xff0f6288
-# yabai -m config normal_window_border_color   0xff555555
-# yabai -m config insert_feedback_color        0xffd75f5f
-yabai -m config split_ratio                  0.50
+yabai -m config normal_window_opacity        0.85
+yabai -m config window_opacity_duration      0.15
+
+# Layout & Interaction
+yabai -m config layout                       bsp
 yabai -m config auto_balance                 on
-yabai -m config mouse_modifier               fn
+yabai -m config split_ratio                  0.50
+yabai -m config window_placement             second_child
+
+# Mouse support
+yabai -m config mouse_modifier               alt
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
 
-# general space settings
-yabai -m config layout                       bsp
-yabai -m config top_padding                  12
-yabai -m config bottom_padding               12
-yabai -m config left_padding                 12
-yabai -m config right_padding                12
-yabai -m config window_gap                   12
+# Spacing & Gaps
+yabai -m config top_padding                  10
+yabai -m config bottom_padding               10
+yabai -m config left_padding                 10
+yabai -m config right_padding                10
+yabai -m config window_gap                   10
 
-# app-specific rules
-yabai -m rule --add app="iTerm" manage=off
-yabai -m rule --add app="VLC" manage=off
-yabai -m rule --add app="League of Legends" manage=off
-yabai -m rule --add app="LibreOffice" manage=off
+# App-Specific Rules
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^iTerm2$" manage=off
 
-echo "yabai configuration loaded."
+borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
+echo "yabai configuration loaded successfully..."
