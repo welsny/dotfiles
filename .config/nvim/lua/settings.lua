@@ -91,5 +91,10 @@ nmap("<C-g>", ":GitGutterToggle<CR>")
 -- Enable syntax highlighting
 vim.cmd('syntax enable')
 
+-- Delay colorscheme to ensure Lazy has loaded it
+vim.schedule(function()
+  pcall(vim.cmd, 'colorscheme gruvbox')
+end)
+
 -- Set leader key
 vim.g.mapleader = ','
