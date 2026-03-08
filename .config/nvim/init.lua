@@ -1,2 +1,2 @@
-lua require('core.lazy')
-lua require('settings')
+require('core.lazy')
+require('settings')

@@ -37,13 +37,8 @@ return {
     end
   },
   'airblade/vim-gitgutter',
-  {
-    'mhinz/vim-signify',
-    config = function()
-      -- Fix for E1098: Use raw Vimscript to set the pattern exactly as expected
-      vim.cmd([[let g:signify_skip_filename_pattern = { '\.pipertmp.*': 1 }]])
-    end
-  },
+  -- Signify (Disabled temporarily due to persistent E1098 type-mismatch errors in Lua environment)
+  -- 'mhinz/vim-signify',
   'vim-airline/vim-airline',
   'farmergreg/vim-lastplace',
 

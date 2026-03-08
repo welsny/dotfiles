@@ -102,7 +102,7 @@ vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
 vim.g.SuperTabDefaultCompletionType = '<C-n>'
 
 -- Signify mapping fix (E1098 workaround)
-vim.cmd([[let g:signify_skip_filename_pattern = { '\.pipertmp.*': 1 }]])
+-- vim.cmd([[let g:signify_skip_filename_pattern = { '\.pipertmp.*': 1 }]])
 
 -- CtrlP
 vim.g.ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' }
@@ -116,6 +116,22 @@ vim.cmd('colorscheme gruvbox')
 
 -- Set leader key
 vim.g.mapleader = ','
+
+-- =============================================================================
+-- TODO: FUTURE UPGRADES
+-- =============================================================================
+
+-- 1. Bridge the CoC vs. Native LSP Gap
+--    - Plan: Eventually migrate from coc.nvim to Native LSP + nvim-cmp.
+--    - Notes: CoC is powerful but runs on Node.js. Native LSP is written in C/Lua,
+--      offering better performance and tighter integration with modern plugins.
+--      Keep CoC for now as it's stable, but look into 'nvim-lspconfig'.
+
+-- 2. Integrated Terminal & UI Enhancements
+--    - Plan: Install 'toggleterm.nvim' and 'lualine.nvim'.
+--    - Notes: Replace the current 'split term://' commands with ToggleTerm for
+--      a persistent, floating terminal. Replace 'vim-airline' with Lua-native
+--      'lualine' for faster startup and easier customization.
 
 -- Goyo Autocmd
 vim.api.nvim_create_autocmd("User", {
